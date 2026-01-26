@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="QuickPlay Arcade — quick mini games for fast play sessions." />
+  <title>QuickPlay Arcade</title>
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --card:#14161d;
+      --text:#e8eaf0;
+      --muted:#a9afbf;
+      --line:rgba(255,255,255,.08);
+      --accent:#6d5efc;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(109,94,252,.35), transparent 60%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(0,204,255,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      font-family:-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:920px; margin:0 auto; padding:28px 18px 44px}
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 16px; border:1px solid var(--line); border-radius:16px;
+      background:rgba(20,22,29,.65); backdrop-filter: blur(10px);
+    }
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      object-fit:cover;
+      display:block;
+      box-shadow: 0 10px 30px rgba(109,94,252,.22);
+    }
+    .title{margin:0; font-size:16px}
+    .subtitle{margin:2px 0 0; color:var(--muted); font-size:13px}
+    .hero{margin:22px 0 18px}
+    .hero h1{margin:0 0 8px; font-size:34px; letter-spacing:-.02em}
+    .hero p{margin:0; color:var(--muted); max-width:64ch}
+    .grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:14px; margin-top:18px}
+    .card{
+      border:1px solid var(--line);
+      background:rgba(20,22,29,.75);
+      border-radius:18px;
+      padding:16px;
+    }
+    .card h2{margin:0 0 8px; font-size:16px}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 12px; border-radius:12px; text-decoration:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:600;
+    }
+    .btn.primary{
+      border-color: rgba(109,94,252,.45);
+      background: linear-gradient(135deg, rgba(109,94,252,.95), rgba(109,94,252,.55));
+    }
+    .meta{display:grid; gap:10px}
+    .row{
+      display:flex; justify-content:space-between; gap:12px;
+      padding:10px 12px; border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .row span{color:var(--text); font-weight:600}
+    footer{margin-top:16px; color:var(--muted); font-size:12px}
+    @media (max-width: 820px){
+      .grid{grid-template-columns:1fr}
+      .hero h1{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <img class="logo" src="/assets/app_icon.png" alt="QuickPlay Arcade" />
+        <div>
+          <p class="title"><strong>QuickPlay Arcade</strong></p>
+          <p class="subtitle">Mini games for fast play sessions</p>
+        </div>
+      </div>
+      <!-- App Store linkin hazır olunca aşağıya ekle -->
+      <a class="btn primary" href="#" aria-label="App Store">App Store (coming soon)</a>
+    </div>
+
+    <div class="hero">
+      <h1>Play something fun in seconds.</h1>
+      <p>
+        QuickPlay Arcade brings a growing mini-game collection together in one place—puzzles, reflex challenges,
+        and classic arcade-style fun for short breaks.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Highlights</h2>
+        <ul>
+          <li>Curated mini-game collection in one app</li>
+          <li>Fast pick-up-and-play sessions</li>
+          <li>Puzzle, arcade, and skill-based challenges</li>
+          <li>More games added over time</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn" href="https://quickplay.github.io/support.html">Support</a>
+          <a class="btn" href="https://quickplay.github.io/privacy.html">Privacy Policy</a>
+          <a class="btn" href="mailto:quickplayarcade@outlook.com">Contact</a>
+        </div>
+      </div>
+
+      <div class="card meta">
+        <h2>Info</h2>
+        <div class="row">Platform <span>iOS</span></div>
+        <div class="row">Category <span>Games</span></div>
+        <div class="row">Ads <span>Ad-supported</span></div>
+        <div class="row">Developer <span>Hasan Can Bayram</span></div>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="y"></span> QuickPlay Arcade. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

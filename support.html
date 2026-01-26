@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="QuickPlay Arcade Support — contact, FAQ, and troubleshooting." />
+  <title>Support - QuickPlay Arcade</title>
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --card:#14161d;
+      --text:#e8eaf0;
+      --muted:#a9afbf;
+      --line:rgba(255,255,255,.08);
+      --accent:#6d5efc;
+      --accent2:#00ccff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(109,94,252,.32), transparent 60%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(0,204,255,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      font-family:-apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:920px; margin:0 auto; padding:28px 18px 56px}
+    header{
+      border:1px solid var(--line);
+      background:rgba(20,22,29,.70);
+      border-radius:18px;
+      padding:16px;
+      backdrop-filter: blur(10px);
+    }
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      object-fit:cover;
+      display:block;
+      box-shadow: 0 10px 30px rgba(109,94,252,.22);
+    }
+    h1{margin:0; font-size:20px}
+    .sub{margin:3px 0 0; color:var(--muted); font-size:13px}
+
+    .grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:14px; margin-top:14px}
+    .card{
+      border:1px solid var(--line);
+      background:rgba(20,22,29,.75);
+      border-radius:18px;
+      padding:16px;
+    }
+    h2{margin:0 0 8px; font-size:16px}
+    p{margin:10px 0; color:var(--muted)}
+    .actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 12px; border-radius:12px; text-decoration:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:700;
+    }
+    .btn.primary{
+      border-color: rgba(109,94,252,.45);
+      background: linear-gradient(135deg, rgba(109,94,252,.95), rgba(109,94,252,.55));
+    }
+    .item{
+      padding:12px; border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      margin-top:10px;
+    }
+    .q{margin:0; color:var(--text); font-weight:800}
+    .a{margin:6px 0 0}
+    .meta{
+      display:grid; gap:10px; margin-top:10px
+    }
+    .row{
+      display:flex; justify-content:space-between; gap:12px;
+      padding:10px 12px; border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .row span{color:var(--text); font-weight:700}
+    footer{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+      width:100%;
+      display:block;
+    }
+    @media (max-width: 820px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <img class="logo" src="/assets/app_icon.png" alt="QuickPlay Arcade" />        	
+        <div>
+          <h1>QuickPlay Arcade Support</h1>
+          <p class="sub">Contact, FAQ, and troubleshooting</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Contact</h2>
+        <p>If you have questions, bug reports, or suggestions, email us and include your device model + iOS version if possible.</p>
+
+        <div class="actions">
+          <a class="btn primary" href="mailto:quickplayarcade@outlook.com?subject=QuickPlay%20Arcade%20Support">Email Support</a>
+          <a class="btn" href="https://quickplay.github.io/privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="meta">
+          <div class="row">Email <span>quickplayarcade@outlook.com</span></div>
+          <div class="row">Typical response <span>1–3 business days</span></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>FAQ</h2>
+
+        <div class="item">
+          <p class="q">Ads not loading?</p>
+          <p class="a a">
+            Check your internet connection and try again later. If you chose “Ask App Not to Track,” ads can still load,
+            but they may be less personalized.
+          </p>
+        </div>
+
+        <div class="item">
+          <p class="q">Is my progress saved?</p>
+          <p class="a">
+            Game progress and high scores are saved locally on your device. Deleting the app may remove local data.
+          </p>
+        </div>
+
+        <div class="item">
+          <p class="q">App crashed or feels slow?</p>
+          <p class="a">
+            Please restart the app and make sure you’re on the latest version. If it continues, email us details so we can fix it.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      © <span id="y"></span> QuickPlay Arcade. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
